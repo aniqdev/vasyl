@@ -209,8 +209,67 @@ function myResult3(one = 10, two = 20, chislo = 110) {
 // 	console.log('пользователь нажал otmena')
 // }
 
-let func = chislo => console.log('result: ' + chislo)
+// let func = chislo => console.log('result: ' + chislo)
 
-let res = func(12352345)
+// let res = func(12352345)
 
-console.log(res)
+// console.log(res)
+
+let cl = console.log
+
+let human = {
+	'name': 'Petya',
+	age: 55,
+	hasDog: true,
+	sayHi: function(kto) {
+		cl('hi ' + kto + ' my age is ' + this.age)
+	},
+	'likes His Mother': true,
+	address: {
+		city:'NY',
+		street: 'Derebasovskaya'
+	}
+}
+
+// cl(human.name) // обращение к свойству объекта через точку
+
+// let value = 'name'
+// cl(human[value]) // обращение к свойству объекта с помощью квадратных скобок
+
+// cl(human.address)
+// human.name = 'Andrey'
+// cl(human)
+
+// cl(human.sayHi('People'))
+
+
+let countries = {
+	DE: 'Germany',
+	UA: 'Ukaraine',
+	CH: 'China'
+}
+
+// for( let key in countries){
+// 	cl(key + ' => ' + countries[key])
+// }
+
+
+class Human{
+	hasDog = true
+	hair = 'Brown'
+	hasHead = 'IQ34'
+	constructor(a, b) {
+	  this.name = a
+	  this.age = b
+	}
+}
+
+let andrey = new Human('Andrey', 45)
+let sasha = new Human('Alex', 56)
+sasha.hair = 'white'
+sasha.car = 'Audi'
+let vova = new Human('Vladimir', 34)
+
+// cl(andrey)
+// cl(sasha)
+// cl(vova)
